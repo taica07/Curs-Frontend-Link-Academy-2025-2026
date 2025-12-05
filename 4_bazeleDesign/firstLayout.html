@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitHome</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: black;
+        color: white;
+      }
+
+      #header ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #header ul li {
+        margin: 2em;
+      }
+      #header nav ul img {
+        width: 5em;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      #logo {
+        width: 10em;
+      }
+
+      #footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 1em 0.5em;
+      }
+
+      .footer_info {
+        width: 0.5em;
+        flex: 1;
+        margin: 0 1em;
+        padding: 0.5em;
+      }
+      .footer_info h5 {
+        text-align: center;
+      }
+      .footer_info p {
+        text-align: center;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      .footer_info ul {
+        text-align: center;
+      }
+
+      .footer_info li {
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <ul>
+          <li><a href="#"> COLLECTION </a></li>
+          <li><a href="#"> HOME GYM </a></li>
+          <li>
+            <a href="#">
+              <img src="img/logoFitHome.png" alt="logo" id="logo" />
+            </a>
+          </li>
+          <li><a href="#"> LOGIN </a></li>
+          <li><a href="#"> CART </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="presentation">
+        <video src="img/homePresentation.mp4" autoplay loop preload="auto"></video>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer_info">
+        <h5>About us</h5>
+        <p>
+          Our mission is to make fitness accessible to everyone. We provide home
+          workout equipment and accessories designed for performance, comfort,
+          and durability.
+        </p>
+      </div>
+      <div class="footer_info">
+        <h5>Follow us</h5>
+        <ul>
+          <li><a href="#"> Facebook </a></li>
+          <li><a href="#"> Instagram </a></li>
+          <li><a href="#"> Twitter </a></li>
+        </ul>
+      </div>
+      <div class="footer_info">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#"> Whats app </a></li>
+          <li><a href="#"> Email </a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

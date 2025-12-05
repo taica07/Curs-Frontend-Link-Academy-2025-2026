@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account registration styled</title>
+    <style>
+      body {
+        background-color: beige;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      form {
+        width: 400px;
+        height: auto;
+        border: 2px solid black;
+        padding: 2em;
+        background-color: white;
+        margin: 1em;
+      }
+
+      form > input {
+   margin-bottom: 2em;
+   padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Account Registration</h1>
+    <p>Fill in the details below to create your profile</p>
+    <form>
+      <label for="username">Username :</label>
+      <input type="text" id="username" placeholder="Your username" />
+<br>
+      <label for="email">Email :</label>
+      <input type="text" id="email" placeholder="email@example.com" />
+<br>
+      <label for="phone">Phone number :</label> <br />
+      <input type="tel" placeholder="+381 *** ***" />
+<br>
+      <label for="password">Passsword :</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Password (min. 6 characters)"
+      />
+<br>
+      <label for="password2"> Confirm Passsword :</label>
+      <input type="password" id="password2" placeholder="Confirm Password" />
+<br>
+      <label name="gender">Gender :</label>
+      <input type="radio" name="gender" id="male" checked />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+<br>
+      <label for="age">Age :</label>
+      <input type="number" placeholder="Your age" />
+<br>
+      <label for="upload">Choose file :</label><br />
+      <input type="file" />
+<br>
+      <label for="color">Favorite Color : </label>
+      <input type="color" />
+<br>
+      <label for="quantity">Item Quantity :</label><br />
+      <input type="range" />
+<br>
+      <input type="checkbox" />
+      <label for="terms">I accept terms and conditions </label>
+<br>
+      <input type="submit" value="Register" />
+      <input type="reset" value="Reset fields" />
+    </form>
+  </body>
+</html>
