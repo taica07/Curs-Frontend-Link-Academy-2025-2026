@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <title>Bootstrap order</title>
+    <style>
+      .box {
+        background-color: blueviolet;
+        padding: 1rem;
+        border: 3px solid white;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <!-- Product Card -->
+
+          <div class="card shadow-sm">
+            <img
+              src="../../MicroExercise/img/Audi_RS5.jpg"
+              class="card-img-top"
+              alt="Product image"
+            />
+
+            <div class="card-body">
+              <h5 class="card-title">Wireless Headphones</h5>
+
+              <p class="card-text fw-bold text-primary">$129.00</p>
+
+              <!-- Hidden on small screens, visible from md and up -->
+
+              <p class="card-text d-none d-md-block">
+                Enjoy crystal-clear sound with noise cancellation and 20 hours
+                of battery life. Perfect for travel and work.
+              </p>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-success flex-grow-1">Add to Cart</button>
+
+                <!-- Hidden on small screens -->
+
+                <button class="btn btn-outline-secondary d-none d-md-block">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS files -->
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

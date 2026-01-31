@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Checkout Page</title>
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <header id="header">
+      <div class="navbar">
+        <div class="brand">
+          <a href="index.html">
+            <img src="img/ModernLogoTransparent.png" alt="ModernLogo" />
+          </a>
+        </div>
+        <div class="primary-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shopPage.html">Shop</a></li>
+            <li><a href="aboutPage.html">About</a></li>
+            <li><a href="contactPage.html">Contact</a></li>
+            <li><a href="salePage.html">Sale!</a></li>
+          </ul>
+        </div>
+
+        <div class="actions">
+          <input type="text" placeholder="Search" />
+
+          <ul>
+            <li>
+              <a href="cartPage.html"
+                ><img src="img/cart_logo.png" alt="cart"
+              /></a>
+            </li>
+            <li>
+              <a href="loginPage.html"
+                ><img src="img/user_logo.png" alt="login"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main id="main">
+      <section class="checkout_section">
+        <h1>Checkout</h1>
+
+        <div class="cards">
+          <!----------- Card 1----------->
+          <!----------- Shipping ------------>
+          <div class="card">
+            <!-- SHIPPING FORM -->
+            <form class="shipping_form">
+              <h3>Shipping Information</h3>
+
+              <div class="form1">
+                <div class="form1_group">
+                  <div class="name_group">
+                    <div>
+                      <label for="first_name">First Name</label>
+                      <input type="text" id="first_name" />
+                    </div>
+
+                    <div>
+                      <label for="last_name">Last Name</label>
+                      <input type="text" id="last_name" />
+                    </div>
+                  </div>
+
+                  <label for="address">Address</label>
+                  <input type="text" id="address" />
+
+                  <label for="apartment">Apartment, suite, etc.</label>
+                  <input type="text" id="apartment" />
+
+                  <div class="select_group">
+                    <div class="group">
+                      <label>Country</label>
+                      <select></select>
+                    </div>
+                    <div class="group">
+                      <label>City</label>
+                      <select></select>
+                    </div>
+                    <div class="group">
+                      <label>Zipcode</label>
+                      <select></select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="save_information">
+                  <input type="checkbox" />
+                  <label>Save contact information</label>
+                </div>
+              </div>
+            </form>
+
+            <!-- PAYMENT FORM -->
+            <form class="payment_form">
+              <h3>Payment Information</h3>
+
+              <div class="form2">
+                <div class="form2_group">
+                  <div class="pay_buttons">
+                    <button type="button" class="paypal">
+                      <img src="img/PayPal.png" alt="PayPal" />
+                    </button>
+                    <button type="button">Cash</button>
+                  </div>
+
+                  <label>Cardholder Name</label>
+                  <input type="text" />
+
+                  <label>Card Number</label>
+                  <input type="text" />
+
+                  <div class="select_group">
+                    <div class="group">
+                      <label>Month</label>
+                      <select></select>
+                    </div>
+                    <div class="group">
+                      <label>Year</label>
+                      <select></select>
+                    </div>
+                    <div class="group">
+                      <label>CVC</label>
+                      <input type="number" />
+                    </div>
+                  </div>
+
+                  <button id="submit_button">Pay</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!----------------Card 2  ---------------->
+          <!----------------Review cart  ------------>
+          <div class="card card_price">
+            <h3>Review your cart</h3>
+            <div class="cart_scroll">
+              <div class="cart_item">
+                <img
+                  class="cart_item_img"
+                  src="img/elliptical-machine.jpg"
+                  alt="elliptical machine"
+                />
+                <div class="cart_item_details">
+                  <p>Elliptical Machine</p>
+                  <div class="cart_item_quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+
+                <strong>$1700</strong>
+              </div>
+
+              <div class="cart_item">
+                <img
+                  class="cart_item_img"
+                  src="img/board_pushup.jpg"
+                  alt="elliptical machine"
+                />
+                <div class="cart_item_details">
+                  <p>Push Ups Board</p>
+                  <div class="cart_item_quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+                <strong>$40</strong>
+              </div>
+
+              <div class="cart_item">
+                <img
+                  class="cart_item_img"
+                  src="img/elastic-band.jpg"
+                  alt="elliptical machine"
+                />
+                <div class="cart_item_details">
+                  <p>Elastic Band</p>
+                  <div class="cart_item_quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+                <strong>$20</strong>
+              </div>
+
+              <div class="cart_item">
+                <img
+                  class="cart_item_img"
+                  src="img/dumbbells.jpeg"
+                  alt="elliptical machine"
+                />
+                <div class="cart_item_details">
+                  <p>Dymbbells</p>
+                  <div class="cart_item_quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+                <strong>$175</strong>
+              </div>
+
+              <div class="cart_item">
+                <img
+                  class="cart_item_img"
+                  src="img/band.jpg"
+                  alt="elliptical machine"
+                />
+                <div class="cart_item_details">
+                  <p>Band</p>
+                  <div class="cart_item_quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+                <strong>$2000</strong>
+              </div>
+
+              <div class="total_price">
+                <p>Total</p>
+                <p>$3 935</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer id="footer">
+      <div class="footer-wrap">
+        <div class="footer1">
+          <div class="links">
+            <h4>SHOP</h4>
+            <ul>
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Skirts</a></li>
+              <li><a href="#">Shoes & Bags</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Sales & Offers</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h4>INFORMATION</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Shoes & Bags</a></li>
+              <li><a href="#">Delivery and Return</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h4>CUSTOMER SUPPORT</h4>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer2">
+          <p>Designed and developed by: <strong> &copy;taica_rullz </strong></p>
+          <ul>
+            <li>
+              <a href="#"><img src="img/facebook.png" alt="facebook" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/instagram.png" alt="facebook" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/tik-tok.png" alt="facebook" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </body>
+</html>

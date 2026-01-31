@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex shrink</title>
+
+    <style>
+      #flexbox1 {
+        display: flex;
+        gap: 1em;
+        margin: 50px;
+        border: 3px solid black;
+        padding: 10px;
+      }
+      #flexbox1 div {
+        width: 50px;
+        height: 50px;
+        padding: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flexbox1">
+      <div style="flex-basis: 5em; flex-shrink: 1; background-color: gold">
+        1
+      </div>
+      <div style="flex-basis: 10em; flex-shrink: 5; background-color: green">
+        5
+      </div>
+      <div
+        style="flex-basis: 5em; flex-shrink: 1; background-color: lightcoral"
+      >
+        1
+      </div>
+    </div>
+  </body>
+</html>

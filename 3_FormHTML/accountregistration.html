@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account registration</title>
+  </head>
+  <body>
+    <h1>Account Registration</h1>
+    <p>Fill in the details below to create your profile</p>
+    <form>
+      <label for="username">Username :</label>
+      <input type="text" id="username" placeholder="Your username" />
+      <br />
+      <br />
+      <label for="email">Email :</label>
+      <input type="text" id="email" placeholder="email@example.com" />
+      <br />
+      <br />
+      <label for="phone">Phone number :</label> <br />
+      <input type="tel" placeholder="+381 *** ***" />
+      <br />
+      <br />
+      <label for="password">Passsword :</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Password (min. 6 characters)"
+      />
+      <br />
+      <br />
+      <label for="password2"> Confirm Passsword :</label>
+      <input type="password" id="password2" placeholder="Confirm Password" />
+      <br />
+      <br />
+      <label name="gender">Gender :</label>
+      <input type="radio" name="gender" id="male" checked />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+      <br />
+      <br />
+      <label for="age">Age :</label>
+      <input type="number" placeholder="Your age" />
+      <br />
+      <br />
+      <label for="upload">Choose file :</label><br />
+      <input type="file" />
+      <br />
+      <br />
+      <label for="color">Favorite Color : </label>
+      <input type="color" />
+      <br />
+      <br />
+      <label for="quantity">Item Quantity :</label><br />
+      <input type="range" />
+      <br />
+      <br />
+      <input type="checkbox" />
+      <label for="terms">I accept terms and conditions </label>
+      <br /><br />
+      <input type="submit" value="Register" />
+      <input type="reset" value="Reset fields" />
+    </form>
+  </body>
+</html>

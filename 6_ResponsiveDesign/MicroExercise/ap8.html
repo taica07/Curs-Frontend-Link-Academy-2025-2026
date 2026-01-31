@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Align Content</title>
+    <style>
+      #grid1 {
+        display: grid;
+        grid-template-columns: 160px 160px 160px;
+        grid-auto-rows: minmax(100px, 140px);
+        gap: 16px;
+        height: 60vh;
+        border: 3px dashed;
+        align-content: center;
+        /* align-content: start;
+        align-content: space-between;
+        align-content: space-around;
+        align-content: end;
+        align-content: stretch; */
+
+        justify-content: space-between;
+        /* justify-content: start;
+        justify-content: space-evenly;
+        justify-content: space-around;
+        justify-content: center;
+        justify-content: end;
+        justify-content: stretch; */
+      }
+
+      .box {
+        background-color: #914e67;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid1">
+      <div id="box1" class="box">Element 1</div>
+      <div id="box2" class="box">Element 2</div>
+      <div id="box3" class="box">Element 3</div>
+      <div id="box4" class="box">Element 4</div>
+      <div id="box5" class="box">Element 5</div>
+    </div>
+  </body>
+</html>

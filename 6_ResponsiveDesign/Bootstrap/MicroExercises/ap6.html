@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <title>Bootstrap order</title>
+    <style>
+      .box {
+        background-color: blueviolet;
+        padding: 2rem 0;
+        border: 3px solid white;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="box col-4 order-md-2">1st in html</div>
+
+        <div class="box col-4 order-md-1">2nd in html</div>
+
+        <div class="box col-4">3rd in html</div>
+        <div class="box col-4">4th in html</div>
+      </div>
+    </div>
+
+    <!-- JS files -->
+    <script src="../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

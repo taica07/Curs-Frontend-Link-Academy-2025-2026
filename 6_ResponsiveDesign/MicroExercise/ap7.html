@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid aligns elemnts</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-auto-rows: 120px;
+        gap: 16px;
+        align-items: center;
+        justify-items: left;
+      }
+
+      .box {
+        background-color: #914e67;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #box4 {
+        align-self: start;
+        justify-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div id="box1" class="box">Element 1</div>
+      <div id="box2" class="box">Element 2</div>
+      <div id="box3" class="box">Element 3</div>
+      <div id="box4" class="box">Element 4</div>
+      <div id="box5" class="box">Element 5</div>
+    </div>
+  </body>
+</html>

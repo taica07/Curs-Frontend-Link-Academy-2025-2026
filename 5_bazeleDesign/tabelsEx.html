@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabels</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #heading tr th {
+        background: #02ad8b;
+        color: white;
+      }
+
+      th,
+      td {
+        border: 1px solid #e6e6e6;
+      }
+
+      th {
+        padding: 18px;
+      }
+
+      td {
+        padding: 12px;
+      }
+      tr:nth-child(even) {
+        background-color: white;
+      }
+      td:last-child  {
+        background-color: red;
+      }
+      tr {
+        background: #ededed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Product Specification</h1>
+
+    <table>
+      <thead id="heading">
+        <tr>
+          <th>Product Description</th>
+          <th>Availability</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basic T-shirt</td>
+          <td>In Stock</td>
+          <td>$19.99</td>
+          <td>Remove</td>
+        </tr>
+        <tr>
+          <td>Denim Jeans</td>
+          <td>Out of Stock</td>
+          <td>$49.99</td>
+          <td>Remove</td>
+        </tr>
+        <tr>
+          <td>Leather Jacket</td>
+          <td>In Stock</td>
+          <td>$129.99</td>
+          <td>Remove</td>
+        </tr>
+        <tr>
+          <td>Running Sneakers</td>
+          <td>In Stock</td>
+          <td>$89.99</td>
+          <td>Remove</td>
+        </tr>
+        <tr>
+          <td colspan="3">Total</td>
+          <td style="background-color: #ededed;">$19.99</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

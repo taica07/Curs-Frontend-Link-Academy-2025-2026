@@ -1,0 +1,25 @@
+/* UNIVERSAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#header {
+  background-color: beige;
+}
+
+#brand {
+  max-width: 4rem;
+}
+
+.actionsImg {
+  width: 2.5rem;
+}

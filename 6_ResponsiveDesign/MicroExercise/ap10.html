@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Align Items</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .page {
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+      }
+
+      /* .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(2, 300px);
+        gap: 24px;
+      } */
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 900px;
+      }
+
+      .card {
+        background: #ffe3b3;
+        border-radius: 16px;
+        padding: 16px;
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        justify-items: center;
+        row-gap: 12px;
+      }
+
+      .card img {
+        width: 180px;
+        border-radius: 12px;
+      }
+
+      .card h3 {
+        margin-top: 12px;
+      }
+
+      .star {
+        justify-self: end;
+        font-size: 20px;
+      }
+
+      /* Tablet */
+      @media (max-width: 768px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 480px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="products-grid">
+        <div class="card">
+          <span class="star">⭐</span>
+          <img src="./img/Audi_RS5.jpg" alt="" />
+          <h3>Shoes</h3>
+        </div>
+
+        <div class="card">
+          <span class="star">⭐</span>
+          <img src="./img/Audi_RS5.jpg" alt="" />
+          <h3>Bags</h3>
+        </div>
+
+        <div class="card">
+          <span class="star">⭐</span>
+          <img src="./img/Audi_RS5.jpg" alt="" />
+          <h3>Accessories</h3>
+        </div>
+
+        <div class="card">
+          <span class="star">⭐</span>
+          <img src="./img/Audi_RS5.jpg" alt="" />
+          <h3>Jackets</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

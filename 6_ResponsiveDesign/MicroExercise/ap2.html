@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex order</title>
+    <style>
+      .flexbox1 {
+        display: flex;
+        gap: 1.5em;
+        margin: 100px;
+      }
+
+      .flexbox1 div {
+        width: 50px;
+        height: 50px;
+        padding: 50px;
+        background-color: rgb(240, 220, 170);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexbox1">
+      <div style="order: 3">1</div>
+      <div style="order: 2">2</div>
+      <div style="order: 4">3</div>
+      <div style="order: 1">4</div>
+    </div>
+  </body>
+</html>
