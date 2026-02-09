@@ -44,8 +44,6 @@ function normalizeCoupon(code) {
   return String(code).trim().toUpperCase();
 }
 
-console.log(normalizeCoupon(RAW_COUPON));
-
 // 3. În secțiunea Order Summary de pe pagina Your Cart adăugați un formular cu:
 
 // un câmp de input (placeholder: „Add promo code”) și un buton „Apply”.
@@ -89,9 +87,9 @@ function login() {
   const passwordInput = document.getElementById("login-password-input").value;
 
   if (loginInput.trim() === "admin" && passwordInput.trim() === "admin") {
-    console.log(true);
+    alert(true);
   } else {
-    console.log(false);
+    alert(false);
   }
 }
 
