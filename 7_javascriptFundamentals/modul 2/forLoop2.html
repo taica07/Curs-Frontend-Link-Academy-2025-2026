@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop 2</title>
+  </head>
+  <body>
+    <h1>For Loop 2</h1>
+
+    <!-- JS Files -->
+    <script>
+      // Scrieți un program care calculează valoarea totală a unei comenzi. Utilizatorul introduce mai
+      // întâi câte produse a cumpărat, apoi introduce prețul fiecărui produs individual. Adunarea și
+      // introducerea prețurilor se fac cu ajutorul unei bucle for. La final, se afișează suma totală a
+      // comenzii rotunjită la 2 zecimale.
+
+      // Intrări / Interacțiune
+
+      // Introducerea unui număr întreg: numărProduse (câte articole conține comanda).
+      // La fiecare iterație a buclei for se cere introducerea prețului acelui articol (număr zecimal).
+      // Exemplu de flux (dialog în consolă)
+
+      // „Câte produse ați cumpărat?” → 3
+      // Iterația 1: „Introduceți prețul produsului #1:” → 59.90
+      // Iterația 2: „Introduceți prețul produsului #2:” → 39.50
+      // Iterația 3: „Introduceți prețul produsului #3:” → 12
+      // Afișare: „Valoarea totală a comenzii: 111.40 €”
+
+      const numberOfProducts = Number(prompt("Cate produse ati cumparat?"));
+
+      let total = 0;
+
+      for (let i = 0; i < numberOfProducts; i++) {
+        const price = Number(prompt(`Introduceți prețul produsului ${i + 1}:`));
+        if (isNaN(price)) {
+          alert("Preț invalid. Introduceți un număr.");
+          i--;
+        } else {
+          total += price;
+        }
+      }
+
+      alert(` Valoarea totala a comenzii este ${total.toFixed(2)} EUR`);
+    </script>
+  </body>
+</html>

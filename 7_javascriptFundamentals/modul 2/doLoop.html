@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While Loop 3</title>
+  </head>
+  <body>
+    <h1>While Loop 3</h1>
+
+    <!-- JS File -->
+
+    <script>
+      let discount = 0;
+      let coupon;
+
+      do {
+        coupon = prompt("Introduceti cuponul de reducere : ");
+
+        if (coupon === null || coupon === "") {
+          alert("Cupon invalid.Incercati din nou");
+          break;
+        }
+        coupon = coupon.toUpperCase();
+
+        if (coupon === "SAVE5") {
+          discount = 0.05;
+          alert("Cupon valid.Reducere 5%");
+          break;
+        } else if (coupon === "SAVE10") {
+          discount = 0.1;
+          alert("Cupon valid.Reducere 10%");
+          break;
+        } else if (coupon === "STOP") {
+          break;
+        } else {
+          alert("Cupon invalid. Încercați din nou.");
+        }
+      } while (true);
+
+      console.log(` Reducere aplicata : ${Math.round(discount * 100)} % `);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Else If 2</title>
+  </head>
+  <body>
+    <h1>if else 2</h1>
+
+    <script>
+      const inputValue = prompt("Introduceti nivelul de membru").toLowerCase();
+
+      if (inputValue === "gold") {
+        alert("Ați câștigat dreptul la o reducere de 10%");
+      } else if (inputValue === "silver") {
+        alert("Ați câștigat dreptul la o reducere de 5%");
+      } else if (inputValue === "") {
+        alert("Nu beneficiati de nici o reducere");
+      }
+    </script>
+  </body>
+</html>

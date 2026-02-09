@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try Catch 2</title>
+  </head>
+  <body>
+    <h1>Try Catch 2</h1>
+
+    <!-- JS Files -->
+    <script>
+      function calculateUnitPrice(totalPrice, quantity) {
+        if (quantity == 0) {
+          throw Error("Quantity cannot be zero");
+        } else if (quantity < 0) {
+          throw {
+            name: "Invalid quantity",
+            message: "Quantity cannot be negative",
+          };
+        } else if (quantity > 1000) {
+          throw RangeError("Quantity exceeds the maximum allowed limit");
+        }
+        return totalPrice / quantity;
+      }
+
+      console.log(calculateUnitPrice(2500, 5));
+      //   console.log(calculateUnitPrice(2500, 0));
+      //   console.log(calculateUnitPrice(2500, -50));
+      //   console.log(calculateUnitPrice(2500, 5000));
+    </script>
+  </body>
+</html>

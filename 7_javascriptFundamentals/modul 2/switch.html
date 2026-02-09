@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <h1>Switch</h1>
+    <!-- JS Files -->
+    <script>
+      function formatPrice(amount, currency) {
+        switch (currency.toUpperCase()) {
+          case "RON":
+            return `${amount} RON`;
+            break;
+          case "EUR":
+            return `${(amount / 5).toFixed(2)} EUR`;
+            break;
+          case "USD":
+            return `${(amount / 4).toFixed(2)} USD`;
+            break;
+
+          default:
+            return String(amount);
+            break;
+        }
+      }
+
+      console.log(formatPrice(100, "RON"));
+      console.log(formatPrice(100, "EUR"));
+      console.log(formatPrice(100, "USD"));
+      console.log(formatPrice(100, "GBR"));
+      console.log(formatPrice(100, "eur"));
+    </script>
+  </body>
+</html>

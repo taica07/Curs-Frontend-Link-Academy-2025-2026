@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break Continue</title>
+  </head>
+  <body>
+    <h1>Break Continue</h1>
+
+    <!-- JS Files -->
+
+    <script>
+      //   Scrieți funcția verificăParola() care:
+      //   cere utilizatorului să introducă parola prin prompt;
+      //   permite maximum 3 încercări.
+
+      //   Logica buclei:
+      //   Dacă utilizatorul introduce parola corectă (admin12345), afișează mesajul „Bine ați venit” și oprește bucla (break).
+      //   Dacă utilizatorul introduce parola greșit, afișează mesajul „Parola nu a fost introdusă corect, încercați din nou” și bucla trece la următoarea încercare.
+      //   După 3 încercări nereușite, afișează mesajul „Contul este blocat temporar”.
+
+      function verificăParola() {
+        const PAROLA_CORECTA = "admin12345";
+        let incercari = 0;
+
+        while (incercari < 3) {
+          let parola = prompt("Introduceti parola");
+
+          if (parola === PAROLA_CORECTA) {
+            alert("Bine ati venit");
+            break;
+          } else {
+            alert("Parola gresita.Incercati din nou");
+            incercari++;
+            continue;
+          }
+        }
+
+        if (incercari === 3) {
+          alert("Contul este blocat temporar");
+        }
+      }
+
+      verificăParola();
+    </script>
+  </body>
+</html>

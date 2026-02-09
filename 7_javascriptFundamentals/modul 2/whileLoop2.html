@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While Loop 2</title>
+  </head>
+  <body>
+    <h1>While Loop 2</h1>
+    <!-- JS File -->
+
+    <script>
+      let budget = Number(prompt("Introduceți bugetul disponibil:"));
+      let total = 0;
+      let count = 0;
+
+      while (budget > 0) {
+        let itemName = prompt(
+          "Introduceți numele articolului sau 'stop' pentru a termina:",
+        );
+
+        if (itemName === "stop") {
+          break;
+        }
+
+        let price = Number(prompt("Introduceți prețul articolului:"));
+
+        if (total + price > budget) {
+          console.log("Depășește bugetul");
+          break;
+        }
+
+        total = total + price;
+        count = count + 1;
+      }
+
+      console.log("Total:", total.toFixed(2));
+      console.log("Articole cumpărate:", count);
+      console.log("Buget rămas:", (budget - total).toFixed(2));
+    </script>
+  </body>
+</html>
