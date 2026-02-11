@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: white;
   color: black;
@@ -660,46 +661,6 @@ section {
 
   /* SHOP PAGE */
 
-  .filter {
-    font-size: 1.4rem;
-  }
-
-  .products {
-    font-size: 1.6rem;
-  }
-
-  .shop_container {
-    flex-direction: column;
-  }
-
-  .filter {
-    width: 100%;
-  }
-  .products_container {
-    grid-template-columns: 1fr;
-  }
-
-  .shop_container {
-    padding: 0 1em;
-  }
-
-  .newsletter {
-    flex-direction: column;
-    text-align: center;
-    padding: 2em 1.5em;
-  }
-
-  .newsletter h2 {
-    max-width: 100%;
-  }
-
-  .newsletter form {
-    max-width: 100%;
-  }
-
-  .pagination ul li {
-    padding: 0.2em 0.3em;
-  }
   /* Checkout */
   .cards {
     flex-direction: column;
@@ -751,39 +712,6 @@ section {
     font-size: 1.5rem;
   }
 
-  /* SHOP PAGE */
-  .shop_container {
-    flex-direction: column;
-  }
-
-  .filter {
-    width: 100%;
-  }
-  .products_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .shop_container {
-    padding: 0 1em;
-  }
-
-  .newsletter {
-    flex-direction: column;
-    text-align: center;
-    padding: 2em 1.5em;
-  }
-
-  .newsletter h2 {
-    max-width: 100%;
-  }
-
-  .newsletter form {
-    max-width: 100%;
-  }
-
-  .pagination ul li {
-    padding: 0.2em 0.3em;
-  }
   /* Checkout */
   .cards {
     flex-direction: column;
