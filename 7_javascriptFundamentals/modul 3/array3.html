@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 3 - sort</title>
+  </head>
+  <body>
+    <h1>Array 3 - sort()</h1>
+
+    <script>
+      function ascendNumbers(a, b) {
+        return a - b;
+      }
+
+      let prices = [150, 240, 55, 11, 45, 485, 401];
+      prices.sort(ascendNumbers);
+      console.log(prices.toString());
+
+      function descendNumbers(a, b) {
+        return b - a;
+      }
+
+      prices.sort(descendNumbers);
+      console.log(prices.toString());
+    </script>
+  </body>
+</html>

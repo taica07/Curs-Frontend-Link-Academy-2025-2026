@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array 6 - ForEach</h1>
+
+    <h3>
+      Este dat un șir de prețuri (în RON).<br />
+      Parcurgeți șirul și măriți fiecare preț cu 20% TVA. <br />
+      Creați un șir nou cu prețurile cu TVA și afișați-l în consolă.<br />
+      Intrare (exemplu): <br />
+      const prices = [650, 420, 290, 1150];<br />
+      const TVA = 0.20; <br />
+      Ieșire așteptată: <br />
+      [780, 504, 348, 1380] <br />
+      Pașii:<br />
+      Creați o listă goală pricesWithVAT.<br />
+      Parcurgeți șirul prices (folosiți for…of sau forEach).<br />
+      Pentru fiecare price calculați valoarea mărită și adăugați elementul în
+      pricesWithVAT.<br />
+      Afișați rezultatul noului șir în consolă.<br />
+      Hinturi:<br />
+      Formula: prețCuTVA = preț * 1.20 <br />
+      Dacă doriți să rotunjiți la un număr întreg: Math.round(baza * 1.20)
+    </h3>
+
+    <!-- JS File -->
+    <script>
+      const prices = [650, 420, 290, 1150];
+      const TVA = 0.2;
+
+      const pricesWithVAT = [];
+
+      prices.forEach((value) => {
+        let total = value + value * 0.2;
+        pricesWithVAT.push(total);
+      });
+
+      console.log(pricesWithVAT);
+    </script>
+  </body>
+</html>

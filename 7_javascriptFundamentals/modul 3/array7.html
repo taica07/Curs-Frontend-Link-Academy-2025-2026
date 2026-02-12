@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Multidimensional Arrays</h1>
+    <h3>
+      Exemplu <br />
+      Imaginați-vă că pe un site e-commerce un produs vine în mai multe mărimi
+      (S, M, L) și mai multe culori (Black, Blue, Red).<br />
+      Prețurile diferă în funcție de combinațiile de mărimi și culori.<br />
+      Dorim să salvăm aceste date într-un șir bidimensional unde:<br />
+      rândurile reprezintă mărimile, în ordine: S, M, L;<br />
+      coloanele reprezintă culorile, în ordine: Black, Blue, Red.<br />
+      Astfel, rezultă o matrice de prețuri priceMatrix unde fiecare celulă este
+      prețul unei combinații specifice (de exemplu, rândul „M”, coloana
+      „Blue”).<br />
+      Ce facem?<br />
+      Mai întâi definim șirul sizes și șirul colors în ordinea menționată.<br />
+      Apoi definim șirul bidimensional priceMatrix astfel încât rândurile să
+      corespundă lui sizes, iar coloanele lui colors.<br />
+      Următorul pas este să găsim programatic și să afișăm prețul pentru
+      combinația M (mărime) și Blue (culoare), folosind indicii din șirurile
+      sizes și colors pentru a accesa elementul corespunzător din matrice.
+    </h3>
+
+    <!-- JS File -->
+    <script>
+      const sizes = ["S", "M", "L"];
+      const colors = ["Black", "Blue", "Red"];
+      const priceMatrix = [
+        [5999, 6099, 6199], // S pe culori
+        [6299, 6399, 6499], // M
+        [6599, 6699, 6799], // L
+      ];
+
+      // Preț pentru M, Blue:
+      const i = sizes.indexOf("M"); // 1
+      const j = colors.indexOf("Blue"); // 1
+      console.log(priceMatrix[i][j]); // 6399
+
+      // Preț pentru L, Red:
+      const x = sizes.indexOf("L"); // 2
+      const y = colors.indexOf("Red"); // 2
+      console.log(priceMatrix[x][y]); // 6799
+
+      // Preț pentru L, Red:
+      const a = sizes.indexOf("M"); // 1
+      const b = colors.indexOf("Black"); // 0
+      console.log(priceMatrix[a][b]); // 6299
+    </script>
+  </body>
+</html>

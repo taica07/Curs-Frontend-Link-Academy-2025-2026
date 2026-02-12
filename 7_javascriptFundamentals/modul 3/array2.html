@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 2</title>
+  </head>
+  <body>
+    <h1>Array 2</h1>
+    <h3>
+      Creați șirurile necesare pentru aplicația voastră web de e-commerce. Unele
+      dintre șiruri pot fi pentru categorii de produse ("Women", "Men", "Kids",
+      "Accessories"), pentru mărimile hainelor ("XS", "S", "M", "L", "XL") sau
+      metode de plată ("Card", "CashOnDelivery", "PayPal"). După ce creați toate
+      șirurile, modificați un element din fiecare șir (de exemplu, sizes[0] =
+      "XXS"). Apoi, afișați lungimea fiecărui șir și arătați șirurile folosind
+      metoda toString().
+    </h3>
+
+    <!-- JS File -->
+    <script>
+      //         Creați șirurile necesare pentru aplicația voastră web de e-commerce.
+
+      // Unele dintre șiruri pot fi pentru categorii de produse ("Women", "Men", "Kids", "Accessories"),
+      //  pentru mărimile hainelor ("XS", "S", "M", "L", "XL") sau metode de plată
+      //  ("Card", "CashOnDelivery", "PayPal").
+
+      // După ce creați toate șirurile, modificați un element din fiecare șir
+      // (de exemplu, sizes[0] = "XXS"). Apoi, afișați lungimea fiecărui șir și arătați
+      // șirurile folosind metoda toString().
+
+      const products = ["Women", "Men", "Kids", "Accessories"];
+      const sizes = ["XS", "S", "M", "L", "XL"];
+      const payments = ["Card", "CashOnDelivery", "PayPal"];
+
+      products[2] = "Mens";
+      sizes[3] = "XXXL";
+      payments[0] = "Cards";
+      console.log(products.toString());
+      console.log(sizes.toString());
+      console.log(payments.toString());
+    </script>
+  </body>
+</html>

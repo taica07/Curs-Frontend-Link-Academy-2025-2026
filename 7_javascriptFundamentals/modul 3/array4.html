@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 3 - push,shift, unshift,pop</title>
+  </head>
+  <body>
+    <h1>Array 3 - pop(),shift(),unshift()</h1>
+    <h2>
+      Sunt date următoarele șiruri inițiale:<br />
+      let products = ["Dress","Shirt","T-Shirt","Jacket"]; <br />
+      let prices = [150, 240, 55, 485];<br />
+      Sarcină:<br />
+      Adăugați "Blouse" la sfârșitul șirului products și prețul 401 la sfârșitul
+      șirului prices.<br />
+      Adăugați "Coat" la începutul șirului products și prețul 799 la începutul
+      șirului prices. <br />
+      Afișați noile lungimi ale ambelor șiruri. <br />
+      Verificați dacă în șirul products există "Jumpsuit". <br />
+      Eliminați ultimul element din ambele șiruri (considerați că este un
+      articol adăugat greșit).<br />
+      Afișați care elemente au fost eliminate.<br />
+      Sortați doar șirul products în ordine alfabetică și afișați rezultatul ca
+      string.<br />
+      Creați funcția compareNumbers(a, b) { return a - b; }<br />
+      Sortați șirul prices folosind această funcție și afișați cel mai mic și
+      cel mai mare preț prin indicii corespunzători.
+    </h2>
+
+    <script>
+      let products = ["Dress", "Shirt", "T-Shirt", "Jacket"];
+      let prices = [150, 240, 55, 485];
+
+      products.push("Blouse");
+      products.unshift("Coat");
+      prices.push(401);
+      prices.unshift(799);
+
+      console.log(products.toString());
+      console.log(prices.toString());
+
+      console.log(products.indexOf("Jumpsuit"));
+
+      console.log(products.toString());
+      console.log(prices.toString());
+
+      console.log(products.pop());
+      console.log(prices.pop());
+
+      function compareNumbers(a, b) {
+        return a - b;
+      }
+
+      console.log(products.sort().toString());
+
+      console.log(prices.sort(compareNumbers)[0]);
+      console.log(prices.sort(compareNumbers)[prices.length - 1]);
+    </script>
+  </body>
+</html>

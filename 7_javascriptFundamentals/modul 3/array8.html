@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array8 - multidimensional (Microexercitiu)</h1>
+
+<h3>Scrieți un program în care utilizatorul introduce tipul cardului și numărul de rate.
+     Pe baza acestei combinații trebuie să găsiți procentul comisionului din matricea tarifelor.<br>
+
+Pașii:<br>
+
+Întrebați utilizatorul despre tipul cardului (VISA, Master, Amex) și numărul de rate (1, 3, 6, 12).<br>
+Validați inputul: dacă utilizatorul introduce o valoare neacceptată → raportați o eroare și cereți o 
+nouă introducere (sau „aruncați” o excepție).<br>
+Găsiți comisionul în matricea bidimensională și afișați rezultatul în forma:
+Comosion pentru <CARD> la <RATE> rate: <PROCENT>%<br><br><br>
+Codul de început:<br>
+
+
+ Opțiuni permise<br>
+const paymentMethods = ["VISA", "Master", "Amex"];<br>
+const installments = ["1", "3", "6", "12"];<br>
+ 
+ Matricea comisioanelor (rânduri = carduri, coloane = rate)<br>
+const feeMatrix = [<br>
+  [0.8, 1.2, 1.9, 3.2], // VISA<br>
+  [0.7, 1.1, 1.8, 3.0], // Master<br>
+  [1.0, 1.5, 2.2, 3.5], // Amex<br>
+];<br>
+ 
+ TODO 1: Cereți input de la utilizator (tip card și număr rate)<br>
+ 
+ TODO 2: Validați ambele inputuri; dacă nu sunt în liste, raportați eroare<br>
+  - folosiți indexOf pentru a găsi indexul<br>
+  - dacă indexOf returnează -1, inputul este invalid<br>
+ 
+TODO 3: Dacă ambele indexuri sunt valide, citiți procentul din feeMatrix<br>
+ - fee = feeMatrix[cardIndex][installmentIndex]<br>
+ 
+ TODO 4: <PROCENAT>%" Afișați mesajul: "Comision pentru <CARD> la <RATE> rate: <PROCENT>%"
+</h3><br>
+
+
+
+  </body>
+</html>
