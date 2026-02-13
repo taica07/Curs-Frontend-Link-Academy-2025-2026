@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object 2</h1>
+
+    <h3>
+      Creați un șir asociativ (obiect) cu următoarele valori:<br />
+      let product = { id: 3, title: "T-Shirt", price: 290, inStock: true };<br />
+      Apoi scrieți o funcție care returnează un șir formatat pentru afișarea
+      unei casete de produs în următorul format: <br />
+      T-Shirt — 290 RON (în stoc / epuizat)<br />
+      În funcție de valoarea inStock, în text trebuie să apară <br />
+      „în stoc” dacă valoarea este true, sau „epuizat” dacă este false.<br />
+      Sugestie: folosiți operatorul ternar pentru o soluție mai scurtă și
+      elegantă.
+    </h3>
+
+    <!-- JS File -->
+    <script>
+      let product = {
+        id: 1,
+        title: "T-Shirt",
+        price: 290,
+        inStock: true,
+      };
+      let product2 = {
+        id: 2,
+        title: "Adidas",
+        price: 150,
+        inStock: false,
+      };
+
+      function showProductDetails(item) {
+        return `${item.title} - ${item.price} ( ${item.inStock ? "In stoc" : "Epuizat"} )  `;
+      }
+
+      console.log(showProductDetails(product));
+      console.log(showProductDetails(product2));
+    </script>
+  </body>
+</html>

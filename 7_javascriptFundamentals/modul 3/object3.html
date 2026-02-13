@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object 3</h1>
+
+    <h3>
+      Creați un șir asociativ (obiect) folosind Object, care să conțină
+      următoarele date: <br />
+      order = { orderId: "A-55", items: 2, total: 980, status: "processing"
+      };<br />
+      Apoi, cu ajutorul buclei for...in, afișați toate cheile și valorile lor în
+      formatul: cheie: valoare.
+    </h3>
+
+    <!-- JS File -->
+    <script>
+      order = { orderId: "A-55", items: 2, total: 980, status: "processing" };
+
+      for (item in order) {
+        console.log(`${item} - ${order[item]} `);
+      }
+    </script>
+  </body>
+</html>

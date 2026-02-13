@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map Object 2</h1>
+
+    <h3>
+      Creați un obiect Map care să păstreze codurile promoționale și reducerile
+      aferente în procente <br />
+      (de exemplu: SAVE5 → 5%, SAVE10 → 10%, BLACKFRIDAY → 25%).<br />
+      Apoi ștergeți codul promoțional BLACKFRIDAY și adăugați un nou cod
+      SANTA<br />
+      cu o reducere de 15%. La final, afișați numărul total de coduri
+      <br />și lista tuturor codurilor împreună cu reducerile lor.
+    </h3>
+
+    <!-- JS File -->
+
+    <script>
+      let promoBlackFriday = new Map([
+        ["SAVE5", "5%"],
+        ["SAVE10", "10%"],
+        ["BLACKFRIDAY", "25%"],
+      ]);
+
+      promoBlackFriday.delete("BLACKFRIDAY");
+      promoBlackFriday.set("SANTA", "15%");
+
+      for (let [key, value] of promoBlackFriday) {
+        console.log(` ${key} - ${value} `);
+      }
+    </script>
+  </body>
+</html>

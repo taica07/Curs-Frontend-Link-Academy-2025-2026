@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map object</h1>
+
+    <h3>
+      Creați un șir asociativ Map care leagă SKU-urile de prețuri: <br />
+      SKU123 → 659, SKU124 → 839. <br />
+      Apoi scrieți o funcție getPrice(sku) care returnează <br />
+      prețul sau null dacă SKU-ul nu există.
+    </h3>
+    <!-- JS File -->
+
+    <script>
+      let products = new Map([
+        ["SKU123", 659],
+        ["SKU124", 839],
+      ]);
+
+      function getSku(sku) {
+        return products.has(sku) ? products.get(sku) : null;
+      }
+
+      console.log(getSku("SKU123"));
+      console.log(getSku("SKU124"));
+      console.log(getSku("SKU125"));
+    </script>
+  </body>
+</html>

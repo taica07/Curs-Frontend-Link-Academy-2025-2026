@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cart Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="bg-light">
+    <!-- HEADER -->
+    <header id="header">
+      <nav class="py-4 nav-shadow header-bg">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <!-- ================= MOBILE HEADER ================= -->
+
+            <!-- MOBILE: LEFT (HAMBURGER + SEARCH) -->
+            <div class="col-4 d-lg-none d-flex align-items-center gap-3">
+              <!-- HAMBURGER -->
+              <button
+                class="btn fs-1 p-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu"
+                data-bs-dismiss="collapse"
+                aria-label="Toggle menu"
+              >
+                ☰
+              </button>
+
+              <!-- SEARCH ICON -->
+              <button
+                class="btn fs-3 p-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mobileSearch"
+                data-bs-dismiss="collapse"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+
+            <!-- MOBILE: CENTER (LOGO) -->
+            <div
+              class="col-4 d-lg-none d-flex justify-content-center align-items-center"
+            >
+              <a href="#">
+                <img class="actionsImg" src="img/logo.png" alt="ModernLogo" />
+              </a>
+            </div>
+
+            <!-- MOBILE: RIGHT (CART + USER) -->
+            <div
+              class="col-4 d-lg-none d-flex justify-content-end align-items-center gap-3"
+            >
+              <a href="#">
+                <img class="actionsImg" src="img/cart_logo.png" alt="Cart" />
+              </a>
+              <a href="#">
+                <img class="actionsImg" src="img/user_logo.png" alt="User" />
+              </a>
+            </div>
+
+            <!-- ================= DESKTOP HEADER ================= -->
+
+            <!-- DESKTOP: LEFT (LOGO + LINKS) -->
+            <div class="col-lg-8 d-none d-lg-flex align-items-center gap-5">
+              <!-- LOGO -->
+              <a href="#">
+                <img src="img/logo.png" alt="ModernLogo" id="brand" />
+              </a>
+
+              <!-- NAV LINKS -->
+              <ul class="d-flex gap-4 mb-0 list-unstyled">
+                <li>
+                  <a class="text-decoration-none text-dark links-txt" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a class="text-decoration-none text-dark links-txt" href="#"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="text-decoration-none text-dark links-txt" href="#"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a class="text-decoration-none text-dark links-txt" href="#"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a class="text-decoration-none text-danger links-txt" href="#"
+                    >Sale!</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- DESKTOP: RIGHT (SEARCH + ICONS) -->
+            <div
+              class="col-lg-4 d-none d-lg-flex justify-content-end align-items-center gap-4"
+            >
+              <input
+                id="search-input"
+                class="form-control form-control-sm py-2 text-end header-bg border border-secondary rounded header-bg"
+                type="text"
+                placeholder="Search"
+              />
+              <a href="cartPage.html">
+                <img class="actionsImg" src="img/cart_logo.png" alt="Cart" />
+              </a>
+              <a href="loginPage.html">
+                <img class="actionsImg" src="img/user_logo.png" alt="User" />
+              </a>
+            </div>
+          </div>
+
+          <!-- MOBILE MENU -->
+          <div class="collapse d-lg-none mt-3" id="mobileMenu">
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  class="d-block py-2 text-decoration-none text-dark h5"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-block py-2 text-decoration-none text-dark h5"
+                  href="#"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-block py-2 text-decoration-none text-dark h5"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-block py-2 text-decoration-none text-dark h5"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-block py-2 text-decoration-none text-danger h5"
+                  href="#"
+                  >Sale!</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- MOBILE SEARCH -->
+          <div class="collapse d-lg-none mt-3" id="mobileSearch">
+            <input
+              type="text"
+              class="form-control py-2 border border-secondary rounded header-bg"
+              placeholder="Search products..."
+            />
+          </div>
+          <!-- ------ -->
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container py-5 my-5">
+      <h1 class="text-center mb-5">Your Cart</h1>
+
+      <div class="row g-4">
+        <!-- LEFT: CART ITEMS -->
+        <div class="col-12 col-lg-6">
+          <div class="shadow-lg rounded p-4">
+            <!-- CART ITEM -->
+            <div class="d-flex gap-3 pb-4 mb-4 border-bottom">
+              <img
+                src="img/cart-1.png"
+                class="rounded flex-shrink-0"
+                width="100"
+                alt="Product"
+              />
+
+              <div class="flex-grow-1">
+                <p class="fw-semibold mb-1">Blazer</p>
+                <small class="text-muted d-block">Color: Beige</small>
+                <small class="text-muted d-block mb-3">Size: S</small>
+
+                <div
+                  class="input-group input-group-sm"
+                  style="max-width: 120px"
+                >
+                  <button class="btn btn-secondary" type="button">−</button>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    value="1"
+                    readonly
+                  />
+                  <button class="btn btn-secondary" type="button">+</button>
+                </div>
+              </div>
+
+              <div
+                class="d-flex flex-column justify-content-between align-items-end text-end"
+              >
+                <strong>$95</strong>
+                <a href="#" class="text-muted small mt-auto">Remove</a>
+              </div>
+            </div>
+            <div class="d-flex gap-3 pb-4 mb-4 border-bottom">
+              <img
+                src="img/cart-2.png"
+                class="rounded flex-shrink-0"
+                width="100"
+                alt="Product"
+              />
+
+              <div class="flex-grow-1">
+                <p class="fw-semibold mb-1">Chunky Knit Sweater</p>
+                <small class="text-muted d-block">Color: Brown</small>
+                <small class="text-muted d-block mb-3">Size: M</small>
+
+                <div
+                  class="input-group input-group-sm"
+                  style="max-width: 120px"
+                >
+                  <button class="btn btn-secondary" type="button">−</button>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    value="1"
+                    readonly
+                  />
+                  <button class="btn btn-secondary" type="button">+</button>
+                </div>
+              </div>
+
+              <div
+                class="d-flex flex-column justify-content-between align-items-end text-end"
+              >
+                <strong>$55</strong>
+                <a href="#" class="text-muted small mt-auto">Remove</a>
+              </div>
+            </div>
+            <div class="d-flex gap-3 pb-4 mb-4 border-bottom">
+              <img
+                src="img/cart-3.png"
+                class="rounded flex-shrink-0"
+                width="100"
+                alt="Product"
+              />
+
+              <div class="flex-grow-1">
+                <p class="fw-semibold mb-1">Mesh Sleeve Blouse</p>
+                <small class="text-muted d-block">Color: Yellow</small>
+                <small class="text-muted d-block mb-3">Size: S</small>
+
+                <div
+                  class="input-group input-group-sm"
+                  style="max-width: 120px"
+                >
+                  <button class="btn btn-secondary" type="button">−</button>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    value="1"
+                    readonly
+                  />
+                  <button class="btn btn-secondary" type="button">+</button>
+                </div>
+              </div>
+
+              <div
+                class="d-flex flex-column justify-content-between align-items-end text-end"
+              >
+                <strong>$32</strong>
+                <a href="#" class="text-muted small mt-auto">Remove</a>
+              </div>
+            </div>
+            <div class="d-flex gap-3 pb-4 mb-4 border-bottom">
+              <img
+                src="img/cart-4.png"
+                class="rounded flex-shrink-0"
+                width="100"
+                alt="Product"
+              />
+
+              <div class="flex-grow-1">
+                <p class="fw-semibold mb-1">Retro Jeans</p>
+                <small class="text-muted d-block">Color: Black</small>
+                <small class="text-muted d-block mb-3">Size: S</small>
+
+                <div
+                  class="input-group input-group-sm"
+                  style="max-width: 120px"
+                >
+                  <button class="btn btn-secondary" type="button">−</button>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    value="1"
+                    readonly
+                  />
+                  <button class="btn btn-secondary" type="button">+</button>
+                </div>
+              </div>
+
+              <div
+                class="d-flex flex-column justify-content-between align-items-end text-end"
+              >
+                <strong>$70</strong>
+                <a href="#" class="text-muted small mt-auto">Remove</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: ORDER SUMMARY -->
+        <div class="col-12 col-lg-6">
+          <div class="shadow-lg rounded p-4 h-100">
+            <h4 class="mb-4 fw-bold">Order Summary</h4>
+
+            <div class="d-flex justify-content-between mb-2">
+              <span class="text-muted">Subtotal</span>
+              <span class="fw-bold">$252</span>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3">
+              <span class="text-muted">Discount</span>
+              <span>$0</span>
+            </div>
+
+            <hr />
+
+            <div class="d-flex justify-content-between fw-bold mb-4">
+              <span>Total</span>
+              <span>$252</span>
+            </div>
+
+            <div class="d-flex gap-2 mb-3">
+              <input
+                id="promo-input"
+                type="text"
+                class="form-control text-center fst-italic"
+                placeholder="Add promo code"
+              />
+              <button onclick="validateAndNotify()" class="btn btn-dark px-4">
+                Apply
+              </button>
+            </div>
+
+            <a href="checkoutPage.html" class="btn btn-dark w-100 mb-3"
+              >Go To Checkout</a
+            >
+
+            <small class="text-muted d-block mb-2">
+              Prices and costs are not displayed until you complete your
+              purchase.
+            </small>
+
+            <small class="text-muted d-block">
+              You have 30 days to change your mind.
+              <a href="#" class="text-dark text-decoration-underline">
+                Delivery & Return
+              </a>
+            </small>
+
+            <small class="text-muted d-block mt-2">
+              Need help?
+              <a href="#" class="text-dark text-decoration-underline">
+                Customer Support
+              </a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="container-fluid p-4 px-5 nav-shadow">
+        <!-- TOP FOOTER -->
+        <div class="row">
+          <!-- LEFT -->
+          <div class="col-12 col-md-6 col-lg-4 text-start">
+            <h4>SHOP</h4>
+            <ul class="list-unstyled">
+              <li class="fs-5">Dresses</li>
+              <li class="fs-5">Jackets</li>
+              <li class="fs-5">Skirts</li>
+              <li class="fs-5">Shoes & Bags</li>
+              <li class="fs-5">Gift Cards</li>
+              <li class="fs-5">Sales & Offers</li>
+            </ul>
+          </div>
+
+          <!-- CENTER -->
+          <div class="col-12 col-md-6 col-lg-4 text-md-start text-lg-center">
+            <h4>INFORMATION</h4>
+            <ul class="list-unstyled">
+              <li class="fs-5">About</li>
+              <li class="fs-5">Terms & Conditions</li>
+              <li class="fs-5">Privacy Policy</li>
+              <li class="fs-5">Delivery & Return</li>
+            </ul>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="col-12 col-md-6 col-lg-4 text-md-start text-lg-end">
+            <h4>CUSTOMER SUPPORT</h4>
+            <ul class="list-unstyled">
+              <li class="fs-5">Contact</li>
+              <li class="fs-5">Help</li>
+              <li class="fs-5">FAQ</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- BOTTOM FOOTER -->
+        <div class="row align-items-center">
+          <p class="col-12 col-lg-6 text-center text-lg-start">
+            Designed and developed by <strong>&copy; taica_rullz</strong>
+          </p>
+
+          <ul
+            class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end gap-4 list-unstyled"
+          >
+            <li><img src="img/facebook.png" width="22" /></li>
+            <li><img src="img/instagram.png" width="22" /></li>
+            <li><img src="img/tik-tok.png" width="22" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS File -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
