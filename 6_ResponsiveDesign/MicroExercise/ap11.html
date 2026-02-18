@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cart-item {
+        display: grid;
+        grid-template-columns: 120px 1fr auto;
+        gap: 20px;
+
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .cart-item img {
+        width: 120px;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .details h3 {
+        margin: 0;
+      }
+
+      .price {
+        font-weight: bold;
+      }
+
+      .remove {
+        background: none;
+        border: none;
+        color: red;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart-item">
+      <img src="img/Audi_RS5.jpg" alt="Produs 1" />
+
+      <div class="details">
+        <h3>Tricou Basic</h3>
+        <p>Mărime: M</p>
+        <p>Cantitate: 2</p>
+        <p class="price">99 RON</p>
+      </div>
+
+      <button class="remove">Remove</button>
+    </div>
+
+    <div class="cart-item">
+      <img src="img/Audi_RS5.jpg" alt="Produs 2" />
+
+      <div class="details">
+        <h3>Hanorac Oversize</h3>
+        <p>Mărime: L</p>
+        <p>Cantitate: 1</p>
+        <p class="price">159 RON</p>
+      </div>
+
+      <button class="remove">Remove</button>
+    </div>
+  </body>
+</html>

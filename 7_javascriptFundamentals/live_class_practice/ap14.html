@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let minPrice = 1000;
+      let maxPrice = 0;
+      let display = true;
+
+      let customerCart = Number(prompt("Numarul de produse din cos"));
+
+      for (let i = 1; i <= customerCart; i++) {
+        let price = Number(prompt("Introduceti pretul pentru produsul " + i));
+        console.log(price);
+
+        if (price < maxPrice || price > minPrice) {
+          document.write("Pretul introdus nu este corect");
+          display = false;
+          continue;
+        } else {
+          if (price > maxPrice) {
+            maxPrice = price;
+          }
+
+          if (price < minPrice) {
+            minPrice = price;
+          }
+        }
+      }
+
+      if (display) {
+        document.write(
+          "Minimul este: " + minPrice + " Si maximul este: " + maxPrice,
+        );
+      } else {
+        document.write("Datele introduse nu au fost corecte");
+      }
+    </script>
+  </body>
+</html>

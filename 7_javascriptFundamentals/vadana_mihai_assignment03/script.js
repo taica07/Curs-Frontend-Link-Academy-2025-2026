@@ -44,6 +44,34 @@
 // "SAVE15" → "Cuponul dvs. oferă 15% reducere."
 // "FREESHIP" → "Cuponul dvs. oferă livrare gratuită."
 
+const VALID_COUPONS = ["SAVE10", "SAVE15", "FREESHIP"];
+
+function isValidCoupon(code) {
+  return VALID_COUPONS.includes(code);
+}
+
+function normalizeCoupon(code) {
+  return String(code).trim().toUpperCase();
+}
+
+function validateAndNotify() {
+  const promoInput = document.getElementById("promo-input").value;
+  const acceptCoupons = normalizeCoupon(promoInput);
+
+  if (!isValidCoupon(acceptCoupons)) {
+    alert("Codul introdus nu este valid.");
+    return;
+  }
+
+  if (acceptCoupons === "SAVE10") {
+    alert("Cuponul dvs. oferă 10% reducere.");
+  } else if (acceptCoupons === "SAVE15") {
+    alert("Cuponul dvs. oferă 15% reducere.");
+  } else if (acceptCoupons === "FREESHIP") {
+    alert("Cuponul dvs. oferă livrare gratuită.");
+  }
+}
+
 //-------------------------   5   --------------------------------
 //  Creați un șir asociativ allProducts cu:
 // numele, prețul și cantitatea tuturor produselor din magazinul vostru e-commerce (suficient să aveți până la 10 produse).
@@ -54,11 +82,41 @@
 // adunați toate valorile într-o variabilă totalValue;
 // afișați în consolă, de exemplu: „Valoarea totală a stocului: 5420 USD”.
 
+const allProducts = [
+  { name: "T-Shirt", price: 30, qty: 15 },
+  { name: "Jeans", price: 50, qty: 9 },
+  { name: "Sneakers", price: 250, qty: 7 },
+  { name: "Hat", price: 25, qty: 22 },
+  { name: "Jacket", price: 80, qty: 3 },
+  { name: "Coat", price: 225, qty: 5 },
+  { name: "Blouse", price: 45, qty: 17 },
+];
+
+function calculateStockProducts(items) {
+  let totalValue = 0;
+
+  for (let product of items) {
+    totalValue += product.price * product.qty;
+  }
+
+  return totalValue;
+}
+
+console.log(calculateStockProducts(allProducts));
+
 //-------------------------   7   --------------------------------
 //  Creați un nou șir lowStock care:
 // conține doar produsele la care qty < 10;
 // după ce ați format șirul lowStock, afișați-l în consolă.
 
+let lowStock = [];
+
+for (let i = 0; i < allProducts.length; i++) {
+  if (allProducts[i].qty < 10) {
+    lowStock.push(allProducts[i]);
+  }
+}
+console.log(lowStock);
 //-------------------------   8   --------------------------------
 //  Căutare produs după nume – scrieți o funcție:
 //     function findProductByName(list, searchName) {
@@ -69,6 +127,20 @@
 // obiectul produs găsit, dacă există;
 // sau null dacă nu există niciun produs cu numele dat.
 // Testați funcția în consolă.
+
+function findProductByName(list, searchName) {
+  for (let product of list) {
+    if (product.name.toLowerCase().trim() === searchName.toLowerCase().trim()) {
+      return product.name;
+    }
+  }
+  return null;
+}
+
+console.log(findProductByName(allProducts, "jeans"));
+console.log(findProductByName(allProducts, "Coat"));
+console.log(findProductByName(allProducts, "glasses"));
+console.log(findProductByName(allProducts, "Sneakers"));
 
 //===================================================================================================================================
 //===================================================================================================================================
@@ -107,29 +179,4 @@
 //  Sfat pentru findProductByName(list, searchName): normalizați atât numele produsului, cât și termenul de căutare
 //  în același mod (de exemplu, toLowerCase().trim()), pentru a avea o căutare case-insensitive.
 
-const VALID_COUPONS = ["SAVE10", "SAVE15", "FREESHIP"];
-
-function isValidCoupon(code) {
-  return VALID_COUPONS.includes(code);
-}
-
-function normalizeCoupon(code) {
-  return String(code).trim().toUpperCase();
-}
-
-function validateAndNotify() {
-  const promoInput = document.getElementById("promo-input").value;
-  const acceptCoupons = normalizeCoupon(promoInput);
-
-  if (isValidCoupon(acceptCoupons)) {
-    if (acceptCoupons === "SAVE10") {
-      alert("Cuponul dvs. oferă 10% reducere.");
-    } else if (acceptCoupons === "SAVE15") {
-      alert("Cuponul dvs. oferă 15% reducere.");
-    } else if (acceptCoupons === "FREESHIP") {
-      alert("Cuponul dvs. oferă livrare gratuită.");
-    } else {
-      alert("codul introdus nu este valid");
-    }
-  }
-}
+// ---------------------------------------------------------------------
