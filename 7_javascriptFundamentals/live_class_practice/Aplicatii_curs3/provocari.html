@@ -1,158 +1,220 @@
 <!doctype html>
 <html>
+  <head>
+    <title>Provocare</title>
+    <meta charset="utf-8" />
+  </head>
 
-<head>
-	<title>Provocare</title>
-	<meta charset="utf-8">
-</head>
+  <body>
+    <h1>Curs 3 Javascript Challenge</h1>
+    <script>
+      // 1. Creati un vector de siruri si unul de numere.
+      // 		Afișati elementele vectorului de siruri folosind instructiunea „while“.
+      // 		Afisați elementele vectorului de siruri folosind instructiunea „do … while“.
+      // 		Verificati daca un șir dat de voi contine numere divizibile cu 3.
+      // 		Afisati un vector in sens invers.
+      console.log(
+        "================================================================",
+      );
+      const stringVector = [
+        "Audi",
+        "Mercedes",
+        "Lamborghini",
+        "Javascript",
+        "React",
+        "NextJS",
+        "VSCode",
+      ];
+      const numberVector = [17, 11, 84, 9, 5, 7, 2026];
 
-<body>
-	<p>1. Creati un vector de siruri si unul de numere.
-		Afișati elementele vectorului de siruri folosind instructiunea „while“.
-		Afisați elementele vectorului de siruri folosind instructiunea „do … while“.
-		Verificati daca un șir dat de voi contine numere divizibile cu 3.
-		Afisati un vector in sens invers.
-	</p>
-	<p>
-		2. Faceti un script ce primeste de la tastatura :
-		-un caracter : C sau F reprezentand grade Celsius sau Fahrenheit
-		-o valoare numerica repezentand temperatura
-		Acest script va face automat conversia din grade C in grade F si invers.
-		Exemplu : date de intrare 0F si 32 date de iesire : Temperatura este 0 0C
-		date de intrare 0 C si 14.44 date de iesire : Temperatura este 58 0F
-		https://www.w3schools.com/js/tryit.asp?filename=tryjs_celsius
+      console.log('AFISARE STRINGURI CU "while"');
+      let i = 0;
+      while (i < stringVector.length) {
+        console.log(stringVector[i]);
+        i++;
+      }
 
-	</p>
-	<p>3. Declarati un array de 3×4 folosind codul de creare a unui vector. Practic, array-ul este de fapt
-		format din 3 array-uri de cate 4 valori fiecare.
+      console.log(
+        "================================================================",
+      );
 
-		var myArray = new Array();
-		Populati matricea cu valori. Afisati array-ul in documentul vostru.
-		Verificati daca matricea contine numere pare și afisati un mesaj corespunzător.</p>
-	<p>4.Scrieti o functie care va desena un tag conform parametrilor dati.
-		Parametrii sunt: denumirea tagului, stilul, continutul tagului si numarul de
-		repetitii. Daca nu se insereaza numarul de repetitii, tagul trebuie desenat cel
-		putin o data.
-		• Exemplu:
-		drawTags("div","border: 1px solid red; background-color: yellow; color:
-		red; margin: 4px; padding: 4px;",“Salut!",2);</p>
-	<p>5. Scrieti o functie care sa genereze o tabla de sah.
-		function sah(nrlinii, nrcoloane, culoare1='white',
-		culoare2='black'){…..}
-		sah(3,3,'magenta','green');</p>
-	<p>6. Scrieti o functie care sa genereze clasamentul
-		echipelor de fotbal din Liga I. <br>
-		Date de intrare : <br>
-	<pre>
-			<code>
-				// Echipele și punctajele lor
-				const echipe = [
-				{ "echipa": "FCSB", "victorii": 10, "egaluri": 5, "infrangeri": 3 },
-				{ "echipa": "CFR Cluj", "victorii": 9, "egaluri": 7, "infrangeri": 2 },
-				{ "echipa": "Universitatea Craiova", "victorii": 8, "egaluri": 6, "infrangeri": 4 },
-				{ "echipa": "Rapid București", "victorii": 7, "egaluri": 8, "infrangeri": 3 },
-				{ "echipa": "Farul Constanța", "victorii": 6, "egaluri": 6, "infrangeri": 6 },
-				{ "echipa": "Sepsi Sfântu Gheorghe", "victorii": 5, "egaluri": 7, "infrangeri": 6 },
-				{ "echipa": "Dinamo București", "victorii": 4, "egaluri": 6, "infrangeri": 8 },
-				{ "echipa": "Petrolul Ploiești", "victorii": 4, "egaluri": 5, "infrangeri": 9 },
-				{ "echipa": "Voluntari", "victorii": 3, "egaluri": 6, "infrangeri": 9 },
-				{ "echipa": "Hermannstadt", "victorii": 2, "egaluri": 8, "infrangeri": 8 },
-				{ "echipa": "Oțelul Galați", "victorii": 1, "egaluri": 8, "infrangeri": 9 },
-				{ "echipa": "U Cluj", "victorii": 14, "egaluri": 4, "infrangeri": 0 },
-				{ "echipa": "FC Botoșani", "victorii": 0, "egaluri": 18, "infrangeri": 0 },
-				{ "echipa": "Poli Iași", "victorii": 0, "egaluri": 0, "infrangeri": 18 },
-				
-				];
-			</code>
-		</pre>
-	Date de iesire:
-	<pre>
-			<code>
-			Loc	Echipa						Puncte		Victorii	Egaluri	Înfrângeri
-			1	FCSB						35			10			5		2
-			2	CFR Cluj					34			9			7		1
-			
+      i = 0;
+      console.log('AFISARE NUMERE CU "do...while"');
 
-			</code>
-		</pre>
+      do {
+        console.log(stringVector[i]);
+        i++;
+      } while (i < stringVector.length);
+      console.log(
+        "================================================================",
+      );
+      for (let j = 0; j < numberVector.length; j++) {
+        const element = numberVector[j];
+        if (element % 3 === 0) {
+          console.log(`Numar divizibil cu 3 gasit : ${element}`);
+        } else {
+          console.log(`Numarul  ${element}  nu este divizibil cu 3`);
+        }
+      }
+      console.log(
+        "================================================================",
+      );
+      console.log(numberVector.sort((a, b) => b - a));
+      console.log(
+        "================================================================",
+      );
 
-	</p>
+      // ------------------------------------------------------------------------------------------------------------------
 
+      // 2. Faceti un script ce primeste de la tastatura :
+      // 		-un caracter : C sau F reprezentand grade Celsius sau Fahrenheit
+      // 		-o valoare numerica repezentand temperatura
+      // 		Acest script va face automat conversia din grade C in grade F si invers.
+      // 		Exemplu : date de intrare 0F si 32 date de iesire : Temperatura este 0 0C
+      // 		date de intrare 0 C si 14.44 date de iesire : Temperatura este 58 0F
+      // 		https://www.w3schools.com/js/tryit.asp?filename=tryjs_celsius
+      //------------------------------------------------------------
 
-	<script>
-// 1. Creati un vector de siruri si unul de numere.
-// 		Afișati elementele vectorului de siruri folosind instructiunea „while“.
-// 		Afisați elementele vectorului de siruri folosind instructiunea „do … while“.
-// 		Verificati daca un șir dat de voi contine numere divizibile cu 3.
-// 		Afisati un vector in sens invers.
+      // let typeOfTemp = prompt("Introduceti tipul temperaturii ( C sau F ) : ");
+      // let valueOfTemp = Number(prompt("Introduceti valoarea temperaturii :"));
 
-const stringVector = ['Audi' , 'Mercedes' , 'Lamborghini' , 'Javascript' , 'React' , 'NextJS', 'VSCode' ];
-const numberVector = [ 17  , 11 , 84 , 5 , 2026  ];
+      // let result = 0;
 
+      // if (typeOfTemp === "C" || typeOfTemp === "c") {
+      // 	result = (valueOfTemp * 9) / 5 + 32;
+      // 	alert(`Temperatura este de ${result} grade C `);
+      // } else if (typeOfTemp === "F" || typeOfTemp === "f") {
+      // 	result = ((valueOfTemp - 32) * 5) / 9;
+      // 	alert(`Temperatura este de ${result} grade F `);
+      // } else {
+      // 	alert("Ati introdus un tip invalid! Folositi C sau F!");
+      // }
 
-// 2. Faceti un script ce primeste de la tastatura :
-// 		-un caracter : C sau F reprezentand grade Celsius sau Fahrenheit
-// 		-o valoare numerica repezentand temperatura
-// 		Acest script va face automat conversia din grade C in grade F si invers.
-// 		Exemplu : date de intrare 0F si 32 date de iesire : Temperatura este 0 0C
-// 		date de intrare 0 C si 14.44 date de iesire : Temperatura este 58 0F
-// 		https://www.w3schools.com/js/tryit.asp?filename=tryjs_celsius
+      // ------------------------------------------------------------------------------------------------------------------
 
+      // 3. Declarati un array de 3×4 folosind codul de creare a unui vector.
+      // Practic, array-ul este de fapt
+      // 		format din 3 array-uri de cate 4 valori fiecare.
+      // 		var myArray = new Array();
+      // 		Populati matricea cu valori. Afisati array-ul in documentul vostru.
+      // 		Verificati daca matricea contine numere pare și afisati un mesaj
+      // corespunzător.
 
+      const myArray = [
+        [12, 13, 25, 26],
+        [33, 34, 45, 46],
+        [74, 75, 86, 87],
+      ];
 
-// 3. Declarati un array de 3×4 folosind codul de creare a unui vector. Practic, array-ul este de fapt
-// 		format din 3 array-uri de cate 4 valori fiecare.
-// 		var myArray = new Array();
-// 		Populati matricea cu valori. Afisati array-ul in documentul vostru.
-// 		Verificati daca matricea contine numere pare și afisati un mesaj corespunzător.
+      document.write(
+        ` const myArray = [<br>[ ${myArray[0]} ],  <br>[ ${myArray[1]} ],  <br>[ ${myArray[2]} ],<br>] <br> <br>`,
+      );
 
+      document.write("Numerele pare din myArray sunt: <br>");
 
+      for (let i = 0; i < myArray.length; i++) {
+        for (let j = 0; j < myArray[i].length; j++) {
+          if (myArray[i][j] % 2 === 0) {
+            document.write(` ${myArray[i][j]} <br> `);
+          }
+        }
+      }
 
+      // ------------------------------------------------------------------------------------------------------------------
 
+      // 4.Scrieti o functie care va desena un tag conform parametrilor dati.
+      // 		Parametrii sunt: denumirea tagului, stilul, continutul tagului si numarul de
+      // 		repetitii. Daca nu se insereaza numarul de repetitii, tagul trebuie desenat cel
+      // 		putin o data.
+      // 		• Exemplu:
+      // 		drawTags("div","border: 1px solid red; background-color: yellow; color:
+      // 		red; margin: 4px; padding: 4px;",“Salut!",2);
 
-// 4.Scrieti o functie care va desena un tag conform parametrilor dati.
-// 		Parametrii sunt: denumirea tagului, stilul, continutul tagului si numarul de
-// 		repetitii. Daca nu se insereaza numarul de repetitii, tagul trebuie desenat cel
-// 		putin o data.
-// 		• Exemplu:
-// 		drawTags("div","border: 1px solid red; background-color: yellow; color:
-// 		red; margin: 4px; padding: 4px;",“Salut!",2);
+      function drawTag(tagName, tagStyle, tagContent, tagRepeat = 1) {
+        for (let i = 0; i < tagRepeat; i++) {
+          document.write(
+            ` <${tagName} style="${tagStyle}"> ${tagContent} </${tagName}> `,
+          );
+        }
+      }
 
+      drawTag(
+        "div",
+        "width:200px;height:200px;border:3px solid black;background-color:green;color:white;margin:2rem;text-align:center; ",
+        "Creating a div",
+        3,
+      );
 
-// 5. Scrieti o functie care sa genereze o tabla de sah.
-// 		function sah(nrlinii, nrcoloane, culoare1='white',
-// 		culoare2='black'){…..}
-// 		sah(3,3,'magenta','green');
+      // ------------------------------------------------------------------------------------------------------------------
 
+      // 5. Scrieti o functie care sa genereze o tabla de sah.
+      // 		function sah(nrlinii, nrcoloane, culoare1='white',
+      // 		culoare2='black'){…..}
+      // 		sah(3,3,'magenta','green');
 
+      // 6. Scrieti o functie care sa genereze clasamentul
+      // 		echipelor de fotbal din Liga I.
+      // Echipele și punctajele lor
+      // const echipe = [
+      // { "echipa": "FCSB", "victorii": 10, "egaluri": 5, "infrangeri": 3 },
+      // { "echipa": "CFR Cluj", "victorii": 9, "egaluri": 7, "infrangeri": 2 },
+      // { "echipa": "Universitatea Craiova", "victorii": 8, "egaluri": 6, "infrangeri": 4 },
+      // { "echipa": "Rapid București", "victorii": 7, "egaluri": 8, "infrangeri": 3 },
+      // { "echipa": "Farul Constanța", "victorii": 6, "egaluri": 6, "infrangeri": 6 },
+      // { "echipa": "Sepsi Sfântu Gheorghe", "victorii": 5, "egaluri": 7, "infrangeri": 6 },
+      // { "echipa": "Dinamo București", "victorii": 4, "egaluri": 6, "infrangeri": 8 },
+      // { "echipa": "Petrolul Ploiești", "victorii": 4, "egaluri": 5, "infrangeri": 9 },
+      // { "echipa": "Voluntari", "victorii": 3, "egaluri": 6, "infrangeri": 9 },
+      // { "echipa": "Hermannstadt", "victorii": 2, "egaluri": 8, "infrangeri": 8 },
+      // { "echipa": "Oțelul Galați", "victorii": 1, "egaluri": 8, "infrangeri": 9 },
+      // { "echipa": "U Cluj", "victorii": 14, "egaluri": 4, "infrangeri": 0 },
+      // { "echipa": "FC Botoșani", "victorii": 0, "egaluri": 18, "infrangeri": 0 },
+      // { "echipa": "Poli Iași", "victorii": 0, "egaluri": 0, "infrangeri": 18 },
+      // ];
 
-// 6. Scrieti o functie care sa genereze clasamentul
-// 		echipelor de fotbal din Liga I.
-// Echipele și punctajele lor
-				// const echipe = [
-				// { "echipa": "FCSB", "victorii": 10, "egaluri": 5, "infrangeri": 3 },
-				// { "echipa": "CFR Cluj", "victorii": 9, "egaluri": 7, "infrangeri": 2 },
-				// { "echipa": "Universitatea Craiova", "victorii": 8, "egaluri": 6, "infrangeri": 4 },
-				// { "echipa": "Rapid București", "victorii": 7, "egaluri": 8, "infrangeri": 3 },
-				// { "echipa": "Farul Constanța", "victorii": 6, "egaluri": 6, "infrangeri": 6 },
-				// { "echipa": "Sepsi Sfântu Gheorghe", "victorii": 5, "egaluri": 7, "infrangeri": 6 },
-				// { "echipa": "Dinamo București", "victorii": 4, "egaluri": 6, "infrangeri": 8 },
-				// { "echipa": "Petrolul Ploiești", "victorii": 4, "egaluri": 5, "infrangeri": 9 },
-				// { "echipa": "Voluntari", "victorii": 3, "egaluri": 6, "infrangeri": 9 },
-				// { "echipa": "Hermannstadt", "victorii": 2, "egaluri": 8, "infrangeri": 8 },
-				// { "echipa": "Oțelul Galați", "victorii": 1, "egaluri": 8, "infrangeri": 9 },
-				// { "echipa": "U Cluj", "victorii": 14, "egaluri": 4, "infrangeri": 0 },
-				// { "echipa": "FC Botoșani", "victorii": 0, "egaluri": 18, "infrangeri": 0 },
-				// { "echipa": "Poli Iași", "victorii": 0, "egaluri": 0, "infrangeri": 18 },
-				// ];
+      //Output :
+      // 			Loc	Echipa						Puncte		Victorii	Egaluri	Înfrângeri
+      // 1	FCSB						35			10			5		2
+      // 2	CFR Cluj					34			9			7		1
 
-//Output :
-			// 			Loc	Echipa						Puncte		Victorii	Egaluri	Înfrângeri
-			// 1	FCSB						35			10			5		2
-			// 2	CFR Cluj					34			9			7		1
+      const echipe = [
+        { echipa: "FCSB", victorii: 10, egaluri: 5, infrangeri: 3 },
+        { echipa: "CFR Cluj", victorii: 9, egaluri: 7, infrangeri: 2 },
+        {
+          echipa: "Universitatea Craiova",
+          victorii: 8,
+          egaluri: 6,
+          infrangeri: 4,
+        },
+        { echipa: "Rapid București", victorii: 7, egaluri: 8, infrangeri: 3 },
+        { echipa: "Farul Constanța", victorii: 6, egaluri: 6, infrangeri: 6 },
+        {
+          echipa: "Sepsi Sfântu Gheorghe",
+          victorii: 5,
+          egaluri: 7,
+          infrangeri: 6,
+        },
+        { echipa: "Dinamo București", victorii: 4, egaluri: 6, infrangeri: 8 },
+        { echipa: "Petrolul Ploiești", victorii: 4, egaluri: 5, infrangeri: 9 },
+        { echipa: "Voluntari", victorii: 3, egaluri: 6, infrangeri: 9 },
+        { echipa: "Hermannstadt", victorii: 2, egaluri: 8, infrangeri: 8 },
+        { echipa: "Oțelul Galați", victorii: 1, egaluri: 8, infrangeri: 9 },
+        { echipa: "U Cluj", victorii: 14, egaluri: 4, infrangeri: 0 },
+        { echipa: "FC Botoșani", victorii: 0, egaluri: 18, infrangeri: 0 },
+        { echipa: "Poli Iași", victorii: 0, egaluri: 0, infrangeri: 18 },
+      ];
 
+      let position = 1;
 
-	</script>
-</body>
+      for (let team of echipe) {
+        let puncte = team.victorii * 3 + team.egaluri;
+        document.write(
+          `${position}. ${team.echipa} - ${puncte} puncte (victorii : ${team.victorii} , egaluri : ${team.egaluri} , infrangeri : ${team.infrangeri} ) <br> <br>`,
+        );
+        position++;
+      }
 
+      // ------------------------------------------------------------------------------------------------------------------
+    </script>
+  </body>
 </html>
